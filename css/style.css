@@ -343,6 +343,8 @@
     position: relative;
     top: 0;
     transition: .5s;
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;    /* Maintain the aspect ratio */
 }
 
 .team-item:hover img {
@@ -350,19 +352,28 @@
 }
 
 .team-item .team-text {
-    position: relative;
     height: 100px;
-    transition: .5s;
+    position: relative;
+    height: max-content; /* Ensure height adjusts to content */
+    overflow: visible; /* Allow content to overflow if necessary */
+    text-overflow: clip; /* Prevent text truncation */
+    white-space: normal; /* Allow text to wrap to the next line */
+    max-height: 250px; /* Set default height for cropped state */
+    cursor: pointer;   /* Show a pointer cursor to indicate clickability */
+    transition: max-height 0.3s ease; /* Smooth transition for expanding/collapsing */
 }
+
 
 .team-item:hover .team-text {
     margin-top: -60px;
-    height: 160px;
+    height: 460px;
 }
 
 .team-item .team-text .team-social {
-    opacity: 0;
+    opacity: 1;
     transition: .5s;
+    max-height: 1000px; /* Set a maximum height */
+    overflow-y: auto;  /* Add vertical scrolling */
 }
 
 .team-item:hover .team-text .team-social {
