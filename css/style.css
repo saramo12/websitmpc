@@ -106,11 +106,15 @@
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
+        white-space: nowrap;
         padding: 10px 0;
     }
 
     .navbar .navbar-nav {
         border-top: 1px solid #EEEEEE;
+        display: flex;
+        align-items: center; /* Vertically center items */
+        justify-content: space-between; /* Distribute items evenly */
     }
 }
 
@@ -122,26 +126,43 @@
 .navbar .navbar-nav .nav-link {
     color: var(--dark);
     font-weight: 500;
+    font-size: larger;
 }
 
 .navbar.sticky-top {
-    top: -100px;
+    top: auto;
     transition: .5s;
 }
+.navbar .nav-item {
+    margin: 10px;
+    padding: 20px; 
+    
+    height: fit-content;
+    width: fit-content;
+}
+.btn-primary {
+    margin-left: 15px; /* Separate the button from the links */
+}
+.navbar .nav-item,  .btn-primary {
+    padding: 25px; /* Customize the padding */
+}
 
+.navbar-brand img{
+    padding: 10;
+}
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
         margin-top: 0;
-        top: 150%;
+        top: auto;
         opacity: 0;
         visibility: hidden;
         transition: .5s;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
+        top: auto;
         visibility: visible;
         transition: .5s;
         opacity: 1;
