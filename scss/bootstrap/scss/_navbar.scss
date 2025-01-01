@@ -189,7 +189,7 @@
 
         .navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
-          flex-basis: auto;
+          flex-basis: 100%;
         }
 
         .navbar-toggler {

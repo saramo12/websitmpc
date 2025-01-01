@@ -89,6 +89,7 @@
 }
 
 .navbar .navbar-nav .nav-link {
+    
     margin-right: 30px;
     padding: 25px 0;
     color: #FFFFFF;
@@ -111,7 +112,7 @@
     }
 
     .navbar .navbar-nav {
-        border-top: 1px solid #EEEEEE;
+        border-top: 20px solid #EEEEEE;
         display: flex;
         align-items: center; /* Vertically center items */
         justify-content: space-between; /* Distribute items evenly */
@@ -126,7 +127,7 @@
 .navbar .navbar-nav .nav-link {
     color: var(--dark);
     font-weight: 500;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .navbar.sticky-top {
@@ -134,11 +135,8 @@
     transition: .5s;
 }
 .navbar .nav-item {
-    margin: 10px;
-    padding: 20px; 
+    margin-top: 1px;
     
-    height: fit-content;
-    width: fit-content;
 }
 .btn-primary {
     margin-left: 15px; /* Separate the button from the links */
@@ -226,6 +224,29 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Container to align logos */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px; /* Space between logos */
+    margin-top: 40px; /* Adds 20px space above the logo container */
+
+}
+
+/* Logo styles */
+.logo-hover {
+    max-height: 200px;
+    padding: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-hover:hover {
+    opacity: 0.6; /* Fades on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
 
 .header-carousel .owl-dot {
     position: relative;
