@@ -575,3 +575,43 @@ header img {
     max-height: 50px;  /* Adjust logo size */
     width: auto;       /* Maintain aspect ratio */
 }
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff5722;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    z-index: 1000;
+    overflow: hidden;
+    animation: slideIn 2s ease-out;
+  }
+  
+  .announcement-bar p {
+    margin: 0;
+    animation: scrollText 10s linear infinite;
+  }
+  
+  /* حركة الشريط عند ظهوره */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* حركة النص داخل الشريط */
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
