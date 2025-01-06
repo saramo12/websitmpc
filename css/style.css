@@ -340,6 +340,9 @@
 
 /*** Team ***/
 .team-item img {
+    width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
+    max-height: 600px; /* إذا كنت تريد ضبط الحد الأقصى للارتفاع */
+    object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
     position: relative;
     top: 0;
     transition: .5s;
@@ -605,4 +608,9 @@ header img {
       transform: translateX(-100%);
     }
   }
-  
+  .team-item img {
+    width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
+    height: auto; /* اجعل الارتفاع متناسبًا */
+    max-height: 400px; /* إذا كنت تريد ضبط الحد الأقصى للارتفاع */
+    object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
+}
