@@ -579,33 +579,35 @@ header img {
     width: auto;       /* Maintain aspect ratio */
 }
 .moving-banner {
-    position: relative; /* مكان الشريط بالنسبة للعنصر */
+    position: relative;
     width: 100%;
-    background-color: #0514f0; /* لون خلفية شبه شفاف (يتناسب مع الأزرق في الموقع) */
+    background-color: #0514f0;
     color: white;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 0;
-    overflow: hidden; /* لإخفاء النص خارج الشريط */
-    border-radius: 5px; /* زوايا دائرية */
-    margin-bottom: 15px; /* مسافة أسفل الشريط */
+    overflow: hidden; /* إخفاء النص خارج الإطار */
+    border-radius: 5px;
+    margin-bottom: 15px;
   }
-  
-  .moving-banner p {
-    display: inline-block;
+
+  .moving-banner-content {
+    display: flex; /* لتمكين النصوص المتتالية */
     white-space: nowrap; /* النص في سطر واحد */
-    animation: scrollText 15s linear infinite; /* حركة النص */
-    margin: 0;
-    padding-left: 100%; /* يبدأ من خارج الشريط */
+    animation: scrollText 10s linear infinite; /* حركة النص */
   }
-  
-  /* حركة النص */
+
+  .moving-banner p {
+    margin: 0;
+    padding-right: 50px; /* مسافة بين النصوص المتكررة */
+  }
+
   @keyframes scrollText {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0); /* بداية الحركة */
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-100%); /* نهاية الحركة */
     }
   }
   .team-item img {
