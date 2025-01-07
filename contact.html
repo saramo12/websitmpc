@@ -30,6 +30,44 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/sendmail.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="js/sendmail.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function () {
+        emailjs.init("cY8rlz3S3YeNZAOgj"); // Replace with your EmailJS public key
+    })();
+
+    function sendMail() {
+        const serviceID = "service_ja30roe"; // Replace with your EmailJS service ID
+        const templateID = "template_5rao0j2"; // Replace with your EmailJS template ID
+
+        // Collect form data
+        const params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        // Send the email
+        emailjs.send(serviceID, templateID, params)
+            .then(response => {
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset(); // Clear the form
+            })
+            .catch(error => {
+                console.error("Error sending email:", error);
+                alert("Failed to send message. Please try again.");
+            });
+    }
+</script>
+
 </head>
 
 <body>
@@ -162,66 +200,48 @@
                     <div class="bg-light rounded p-5">
                         <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
                         <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <p class="mb-4">Send us a message, and we'll get back to you as soon as possible!</p>
+                        <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit" onclick="emailSend()">Send Message</button>
+                                    <button type="button" class="btn btn-primary w-100 py-3" onclick="sendMail()">Send Message</button>
                                 </div>
-                                <!-- <script src="https://smtpjs.com/v3/smtp.js">
-                                </script> -->
-                                <!-- <script src="js/sendmail.js">
-                                </script>
-                                <script type="text/javascript"
-                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-                                </script>
-                                <script type="text/javascript">
-                                (function(){
-                                    emailjs.init({
-                                        publicKey: "cY8rlz3S3YeNZAOgj",
-                                    });
-                                })();
-                                </script> -->
                             </div>
                         </form>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="h-100" style="min-height: 400px;">
                         <!-- Clickable Image -->
                         <a href="https://www.goog.le.com/maps/search/+6346+AL+Hadaba+EL-+Wosta+AL+Mokattam,+Cairo,+Egypt/@30.0187627,31.2757568,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
                             <img src="img/map.png" alt="Clickable Image" class="img-fluid rounded mb-3">
                         </a>
-                
-                        <!-- Embedded Map -->
-                        <!-- <iframe class="rounded w-100 h-100"
-                            src="https://www.google.com/maps/search/+6346+AL+Hadaba+EL-+Wosta+AL+Mokattam,+Cairo,+Egypt/@30.0187627,31.2757568,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                            frameborder="0" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe> -->
+            
                     </div>
                 </div>
             </div>

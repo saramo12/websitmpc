@@ -1,5 +1,3 @@
-"use strict";
-
 // function emailSend(){
 //     Email.send({
 //         Host : "smtp.mailendo.com",
@@ -13,12 +11,23 @@
 //       message => alert(message)
 //     );
 // }
-function emailSend() {
-  var parms = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("jubject").value,
-    message: document.getElementById("message").value
-  };
-  emailjs.send("service_ja30roe", "template_5rao0j2", parms).then(alert("Email Send!!"));
-}
+// function sendMail(){
+//     var params={
+//         name : document.getElementById("name").value,
+//         email: document.getElementById("email").value,
+//         subject: document.getElementById("subject").value,
+//         message: document.getElementById("message").value,
+//     }
+// const serviceID="service_ja30roe";
+// const templateID="template_5rao0j2";
+// emailjs.send(serviceID,templateID,params).then(
+//     res=>{
+//         document.getElementById("name").value="";
+//         document.getElementById("email").value="";
+//         document.getElementById("subject").value="";
+//         document.getElementById("message").value="";
+//         console.log(res);
+//         alert("your message send sucvcessfully");
+// })
+// .catch((err)=>console.log(err));}
+"use strict";
