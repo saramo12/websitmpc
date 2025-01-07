@@ -577,37 +577,75 @@
 header img {
     max-height: 50px;  /* Adjust logo size */
     width: auto;       /* Maintain aspect ratio */
+    
 }
 .moving-banner {
     overflow: hidden;
     white-space: nowrap;
-    background-color: #2421d4; /* لون الخلفية */
+    background-color: #2421d4; /* Background color */
     padding: 10px;
     position: relative;
-    width: 100%; /* الحاوية بعرض الشاشة */
-    height: 50px; /* ارتفاع الحاوية */
-  }
-  
-  .moving-banner-content {
+    width: 100%; /* Container width */
+    height: 70px; /* Container height */
+}
+
+.moving-banner-content {
     display: inline-block;
-    animation: scroll-continuous 20s linear infinite; /* حركة مستمرة بدون توقف */
-    white-space: nowrap; /* الجمل لا تنكسر */
-  }
-  
-  .moving-banner-content p {
-    display: inline-block;
-    margin: 0 50px; /* مسافة بين الجمل */
-    font-size: 18px; /* حجم النص الأساسي */
-    color: #e4e3e3; /* لون النص */
-  }
-  
+    animation: scroll-left-to-right 20s linear infinite; /* Infinite scroll */
+    white-space: nowrap; /* Prevent line breaks */
+}
+    .moving-banner-content p {
+        display: inline-block;
+        margin: 0 50px; /* Space between text items */
+        font-size: 18px; /* Font size */
+        color: #e4e3e3; /* Text color */
+    }
+    
+    /* Keyframe to move the text from left to right */
+    @keyframes scroll-left-to-right {
+        0% {
+            transform: translateX(0); /* Start from the left */
+        }
+        100% {
+            transform: translateX(-100%); /* Move completely off-screen to the left */
+        }
+    }
+    
+    /* Create an infinite loop by repeating the content */
+    .moving-banner-content {
+        display: inline-flex;
+        animation: scroll-left-to-right 20s linear infinite;
+        white-space: nowrap;
+        width: 200%; /* Make content wider than the container */
+    }
+    
+    .moving-banner-content p {
+        display: inline-block;
+        margin: 0 50px; /* Space between text items */
+        font-size: 18px; /* Font size */
+        color: #e4e3e3; /* Text color */
+    }
+    
+    /* Adjust to ensure the content is wide enough to ensure seamless scrolling */
+    .moving-banner-content {
+        display: flex;
+        animation: scroll-left-to-right 20s linear infinite;
+        width: 200%; /* Ensure the content is twice as wide as the container */
+    }
+    
+
   .highlight {
     font-size: 24px; /* تكبير النص الخاص */
     color: #ffffff; /* لون مميز */
     font-weight: bold; /* جعل النص عريضًا */
   }
+  .highlightc {
+    font-size: 28px; /* تكبير النص الخاص */
+    color: #ffffff; /* لون مميز */
+    font-weight: bold; /* جعل النص عريضًا */
+  }
   
-  /* حركة النصوص بشكل متصل */
+  /* حركة النصوص بشكل متصل
   @keyframes scroll-continuous {
     0% {
       transform: translateX(0);
@@ -615,7 +653,7 @@ header img {
     100% {
       transform: translateX(-100%);
     }
-  }
+  } */
   
   
   .team-item img {
