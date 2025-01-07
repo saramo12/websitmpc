@@ -579,37 +579,45 @@ header img {
     width: auto;       /* Maintain aspect ratio */
 }
 .moving-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #2421d4; /* لون الخلفية */
+    padding: 10px;
     position: relative;
-    width: 100%;
-    background-color: #0514f0;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 0;
-    overflow: hidden; /* إخفاء النص خارج الإطار */
-    border-radius: 5px;
-    margin-bottom: 15px;
+    width: 100%; /* الحاوية بعرض الشاشة */
+    height: 50px; /* ارتفاع الحاوية */
   }
-
+  
   .moving-banner-content {
-    display: flex; /* لتمكين النصوص المتتالية */
-    white-space: nowrap; /* النص في سطر واحد */
-    animation: scrollText 10s linear infinite; /* حركة النص */
+    display: inline-block;
+    animation: scroll-continuous 20s linear infinite; /* حركة مستمرة بدون توقف */
+    white-space: nowrap; /* الجمل لا تنكسر */
   }
-
-  .moving-banner p {
-    margin: 0;
-    padding-right: 50px; /* مسافة بين النصوص المتكررة */
+  
+  .moving-banner-content p {
+    display: inline-block;
+    margin: 0 50px; /* مسافة بين الجمل */
+    font-size: 18px; /* حجم النص الأساسي */
+    color: #e4e3e3; /* لون النص */
   }
-
-  @keyframes scrollText {
+  
+  .highlight {
+    font-size: 24px; /* تكبير النص الخاص */
+    color: #ffffff; /* لون مميز */
+    font-weight: bold; /* جعل النص عريضًا */
+  }
+  
+  /* حركة النصوص بشكل متصل */
+  @keyframes scroll-continuous {
     0% {
-      transform: translateX(0); /* بداية الحركة */
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%); /* نهاية الحركة */
+      transform: translateX(-100%);
     }
   }
+  
+  
   .team-item img {
     width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
     height: auto; /* اجعل الارتفاع متناسبًا */
