@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #0463FA;
-    --light: #EFF5FF;
+    --light: #ffffff;
     --dark: #1B2C51;
 }
 
@@ -148,7 +148,7 @@
 .navbar-brand img{
     padding: 10;
 }
-@media (min-width: 500px) {
+@media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -315,7 +315,7 @@
 
 
 /*** Feature ***/
-@media (min-width: 500px) {
+@media (min-width: 992px) {
     .container.feature {
         max-width: 100% !important;
     }
@@ -325,13 +325,13 @@
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1200px) {
     .feature-text  {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1400px) {
     .feature-text  {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
@@ -447,14 +447,14 @@
     z-index: 1;
 }
 
-@media (min-width:500px) {
+@media (min-width: 768px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 992px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -644,3 +644,307 @@ header img {
     object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
 }
 
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.chart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    position: relative;
+    margin: 40px 0;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.chart .bar {
+    width: 10%;
+    background-color: #007BFF;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 5px 5px 0 0;
+}
+
+.chart .bar:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.chart .bar .value {
+    position: absolute;
+    top: -25px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+.chart .label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.y-axis-labels {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Responsive Styles */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.y-axis-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.bar {
+    position: relative;
+    width: 50px;
+    background-color: #4CAF50;
+    margin: 0 10px;
+}
+
+.bar .value {
+    position: absolute;
+    bottom: 100%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.x-axis-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.x-axis-labels div {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .chart {
+        height: 350px;
+    }
+    .chart .bar {
+        width: 8%;
+    }
+}
+
+@media (max-width: 992px) {
+    .chart-container {
+        width: 90%;
+    }
+    .chart {
+        height: 300px;
+    }
+    .chart .bar {
+        width: 12%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        width: 95%;
+    }
+    .chart {
+        height: 250px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chart .bar {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .y-axis-labels {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .x-axis-labels {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .chart-container {
+        width: 100%;
+    }
+    .chart {
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chart .bar {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .x-axis-labels {
+        flex-direction: column;
+    }
+    .y-axis-labels {
+        display: none;
+    }
+}
+
+/* Container for the logos */
+.logo-container {
+    display: flex;
+    justify-content: space-around;  /* Distribute logos evenly */
+    flex-wrap: nowrap;              /* Ensure logos stay in the same row */
+    gap: 20px;                      /* Add spacing between logos */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;              /* Optional: to limit max width of container */
+}
+
+/* Make each logo responsive but keep the same size */
+.logo-hover {
+    height: 240px;                 /* Set the fixed height for logos */
+    width: auto;                   /* Keep the width proportional */
+    transition: transform 0.3s ease;  /* Optional: for hover effect */
+}
+
+/* Hover effect for logos */
+.logo-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium-sized screens */
+@media (max-width: 800px) {
+    .logo-hover {
+        height: 120px;         /* Reduce logo height on medium screens */
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .logo-hover {
+        height: 120px;         /* Further reduce logo height */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+    .logo-hover {
+        height: 120px;         /* Further reduce logo height */
+    }
+}
+/* Make images in carousel responsive */
+.owl-carousel .owl-carousel-item img {
+    width: 100%;         /* Ensure images take full width of their container */
+    height: auto;        /* Maintain aspect ratio of the images */
+    object-fit: cover;   /* Ensure the images cover the container without distortion */
+    display: block;      /* Avoid unnecessary space below images */
+}
+
+/* Responsive adjustments for the carousel */
+@media (max-width: 768px) {
+    .owl-carousel .owl-carousel-item {
+        padding: 0;       /* Remove extra padding on smaller screens */
+    }
+
+    .owl-carousel .owl-carousel-item img {
+        object-fit: cover; /* Make sure images still cover the container */
+    }
+}
+
+/* General styles for logos */
+.logo-hover {
+    width: 100%; /* Ensure logos are responsive */
+    max-width: 200px; /* Set a maximum size for logos */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for logos */
+.logo-hover:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Adjust padding for partners' names */
+.partner-name {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo-hover {
+        max-width: 180px; /* Reduce size on medium screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .logo-hover {
+        max-width: 150px; /* Further reduce size for smaller screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-hover {
+        max-width: 120px; /* Ensure the logos fit well on mobile */
+    }
+}

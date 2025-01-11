@@ -9,154 +9,11 @@
     <meta content="" name="description">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>انتظار الافتتاح قريبًا</title> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <title>Number of Hospitals Bar Graph</title>
     <title>Number of Hospitals by Category</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        .chart-container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .chart {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            height: 400px;
-            position: relative;
-            margin: 40px 0;
-            border-left: 2px solid #333;
-            border-bottom: 2px solid #333;
-        }
-
-        .chart .bar {
-            width: 10%;
-            background-color: #007BFF;
-            text-align: center;
-            position: relative;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            border-radius: 5px 5px 0 0;
-        }
-
-        .chart .bar:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .chart .bar .value {
-            position: absolute;
-            top: -25px;
-            font-size: 14px;
-            color: #555;
-            font-weight: bold;
-        }
-
-        .chart .label {
-            margin-top: 10px;
-            font-size: 12px;
-            color: #555;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        .y-axis-labels {
-            position: absolute;
-            left: -50px;
-            top: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            font-size: 14px;
-            color: #333;
-        }
-        
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 12px;
-            color: #777;
-        }
-        .chart-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .chart {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    
-    .y-axis-labels {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        margin-right: 20px;
-    }
-    
-    .bar {
-        position: relative;
-        width: 50px;
-        background-color: #4CAF50;
-        margin: 0 10px;
-    }
-    
-    .bar .value {
-        position: absolute;
-        bottom: 100%;
-        text-align: center;
-        width: 100%;
-        color: white;
-        font-weight: bold;
-    }
-
-    .x-axis-labels {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-    }
-    
-    .x-axis-labels div {
-        text-align: center;
-        width: 100%;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-    
-   
-
-    
-
-    </style>
-
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,7 +50,7 @@
 
    
     <!-- Topbar Start -->
-    <div class=" container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class=" container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
@@ -215,7 +72,7 @@
             </div>
             
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
     
@@ -225,7 +82,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="img/logo.png" alt="Clinic Logo" style="max-height: 145px;">
-            <h1 style="color: blue; padding-left: 40px;" class="mb-1">Tailor Your Health Care Facility</h1>
+            <h1 style="color: blue; padding-left: 30px;padding-top: 80px;" class="mb-1">Tailor Your Health Care Facility</h1>
             
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -334,11 +191,11 @@
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="img/certificate.png" alt="certificate Logo" class="logo-hover", style="max-height: 240px;">
-
+                    <img src="img/certificate.png" alt="certificate Logo" class="logo-hover">
                     <img src="img/elghar.png" alt="elghar Logo" class="logo-hover">
                     <img src="img/iso.png" alt="iso Logo" class="logo-hover">
                 </div>
+                
                 
                 
             </div>
@@ -662,21 +519,21 @@
     </div>
 </div>
 <!-- Team End -->
- <!-- partners Start -->
- <div class="container-xxl py-5">
+ <!-- Partners Start -->
+<div class="container-xxl py-5">
     <div class="container centers">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="d-inline-block border rounded-pill py-1 px-4">Partners</p>
             <h1>Our Partners</h1>
         </div>
-        <div class="row g-4 justify-content-center centers">
+        <div class="row g-4 justify-content-center">
             <!-- Each logo wrapped in a column -->
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center"style="padding-top: 20px;">
-                <img src="img/seashell.jpg" alt="seashell Logo" class="logo-hover">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/welcare.png" alt="welcare Logo" class="logo-hover">
             </div>
             
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center"style="padding-top: 60px;">
-                <img src="img/zahraa.jpg" alt="zahraa Logo" class="logo-hover">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/zahraa.jpg" alt="zahraa Logo" class="logo-hover"style="padding-top=20px">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/arab.jpg" alt="arab Logo" class="logo-hover">
@@ -697,35 +554,33 @@
                 <img src="img/elkatiblogo.png" alt="Elkatib Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/seashell.jpg" alt="seashell Logo" class="logo-hover">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/elitelogo.png" alt="Elite Logo" class="logo-hover">
             </div>
-            
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/alexlogo.png" alt="alex Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                <img src="img/elsalam.png" alt="elsalam Logo" class="logo-hover"style="padding-top: 60px;">
+                <img src="img/elsalam.png" alt="elsalam Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                <img src="img/اشغشا.jpg" alt="hayah Logo" class="logo-hover"style="padding-top: 10px;width: 250px; height: 200px;">
+                <img src="img/اشغشا.jpg" alt="hayah Logo" class="logo-hover">
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                <img src="img/welcare.png" alt="welcare Logo" class="logo-hover"style="width: 250px; height: 2000px;">
-            </div>
+            
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/shifa.png" alt="welcare Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/kasr.jpg" alt="kasr Logo" class="logo-hover">
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center"style="padding-top: 60px;">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/mansouralogo.png" alt="Mansoura Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/preventive.png" alt="preventive Logo" class="logo-hover">
             </div>
-            
-
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/fayoum.jpg" alt="kasr Logo" class="logo-hover">
             </div>
@@ -739,40 +594,32 @@
                 <img src="img/benha.jpg" alt="dorra Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                <img src="img/abo-elreesh-logo.jpg" alt="dorra Logo" class="logo-hover"style="padding-top: 60px;">
+                <img src="img/abo-elreesh-logo.jpg" alt="dorra Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/ora.jpg" alt="merry Logo" class="logo-hover">
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <img src="img/badran.jpg" alt="badran Logo" class="logo-hover">
-                </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <img src="img/wafaa.jpg" alt="wafaa Logo" class="logo-hover">
+                <img src="img/badran.jpg" alt="badran Logo" class="logo-hover">
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center"style="width: 250px; height: 200px;">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/wafaa.jpg" alt="wafaa Logo" class="logo-hover">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/gzaaer.jpg" alt="dorra Logo" class="logo-hover">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center"style="width: 250px; height: 200px;">
-            <img src="img/manara.jpg" alt="dorra Logo" class="logo-hover">
-        </div>
-       
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center" style="width: 100px; height: 100px;">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/manara.jpg" alt="dorra Logo" class="logo-hover">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
                 <img src="img/nahdi.png" alt="nahdi Logo" class="logo-hover">
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 text-start">
-                <p style="font-size: 16px; margin: 20;padding-top: 100px;">Nahdi</p>
-
-            </div>
-        
-        
-            
             
         </div>
-        
     </div>
 </div>
-<!-- partners End -->
+<!-- Partners End -->
+
     
 <div id="graph-container" style="margin-top: 50px; opacity: 1; transition: opacity 1.5s ease-in-out; 
   border: 2px solid #ddd; padding: 20px; border-radius: 10px; background-color: #ffffff;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
