@@ -643,32 +643,4 @@ header img {
     max-height: 400px; /* إذا كنت تريد ضبط الحد الأقصى للارتفاع */
     object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
 }
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    .chart-container {
-        width: 100%;
-        padding: 10px;
-    }
-    .chart .bar {
-        width: 15%; /* Increase width for better visibility on smaller screens */
-    }
-}
-.chart-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chart {
-    display: flex;
-    flex-wrap: wrap; /* Allows bars to wrap on small screens */
-    justify-content: space-evenly;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
 
