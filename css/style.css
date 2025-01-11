@@ -579,39 +579,94 @@ header img {
     width: auto;       /* Maintain aspect ratio */
     
 }
+/* Container Styles */
 .moving-banner {
     overflow: hidden;
     white-space: nowrap;
-    background-color: #2421d4; /* Background color */
-    padding: 10px;
+    background-color: #1A1A1A; /* Dark background for a professional look */
+    /* padding: 15px 10px; */
     position: relative;
-    width: 100%; /* Container width */
-    height: 70px; /* Container height */
+    width: 96vw; /* Full width */
+    height: 80px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Scroll Content */
 .moving-banner-content {
     display: inline-flex;
-    animation: scroll-right-to-left 20s linear infinite; /* Infinite scroll */
+    animation: scroll-right-to-left 100s linear infinite; /* Slower scroll for readability */
     white-space: nowrap; /* Prevent line breaks */
-    width: 200%; /* Make content wider than the container */
+    width: 200%; /* Content width more than the container */
 }
 
 .moving-banner-content p {
     display: inline-block;
-    margin: 0 50px; /* Space between text items */
-    font-size: 18px; /* Font size */
-    color: #e4e3e3; /* Text color */
+    margin: 0 40px; /* Space between text items */
+    font-size: 18px; /* Medium font size */
+    color: #f1f1f1; /* Light text color for readability */
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
 }
 
-/* Keyframe to move the text from left to right */
+/* Keyframe for scrolling */
 @keyframes scroll-right-to-left {
     0% {
         transform: translateX(-100%); /* Start off-screen to the left */
     }
     100% {
-        transform: translateX(100%); /* Move completely off-screen to the right */
+        transform: translateX(100%); /* Move off-screen to the right */
     }
 }
+
+/* Professional Highlight */
+.highlight {
+    font-size: 22px; /* Slightly larger for emphasis */
+    font-weight: bold; /* Bold for importance */
+    background-color: transparent; /* Transparent background */
+    padding: 0 3px; /* Tight padding around text */
+    animation: color-change 3s ease-in-out infinite; /* Color change animation */
+}
+
+.highlightc {
+    font-size: 26px; /* Larger size for major emphasis */
+    font-weight: bold; /* Bold for emphasis */
+    background-color: transparent;
+    padding: 0 3px;
+    animation: color-change 3s ease-in-out infinite; /* Color change animation */
+}
+
+/* Color Change Animation */
+@keyframes color-change {
+    0% {
+        color: #ffcc00; /* Start with yellow */
+    }
+    25% {
+        color: #ff4d00; /* Transition to orange */
+    }
+    50% {
+        color: #00bfff; /* Transition to blue */
+    }
+    75% {
+        color: #32cd32; /* Transition to lime green */
+    }
+    100% {
+        color: #ffcc00; /* Back to yellow */
+    }
+}
+
+/* Keyframe for smooth scrolling */
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
 
 
 
@@ -895,9 +950,10 @@ footer {
 /* Make images in carousel responsive */
 .owl-carousel .owl-carousel-item img {
     width: 100%;         /* Ensure images take full width of their container */
-    height: auto;        /* Maintain aspect ratio of the images */
-    object-fit: cover;   /* Ensure the images cover the container without distortion */
-    display: block;      /* Avoid unnecessary space below images */
+    height: 440px; 
+    padding-top: 80px;       /* Maintain aspect ratio of the images */
+    /* object-fit: cover;   Ensure the images cover the container without distortion */
+    display: flex;      /* Avoid unnecessary space below images */
 }
 
 /* Responsive adjustments for the carousel */
@@ -906,9 +962,7 @@ footer {
         padding: 0;       /* Remove extra padding on smaller screens */
     }
 
-    .owl-carousel .owl-carousel-item img {
-        object-fit: cover; /* Make sure images still cover the container */
-    }
+    
 }
 
 /* General styles for logos */
