@@ -148,7 +148,7 @@
 .navbar-brand img{
     padding: 10;
 }
-@media (min-width: 992px) {
+@media (min-width: 500px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -315,7 +315,7 @@
 
 
 /*** Feature ***/
-@media (min-width: 992px) {
+@media (min-width: 500px) {
     .container.feature {
         max-width: 100% !important;
     }
@@ -325,13 +325,13 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 500px) {
     .feature-text  {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 500px) {
     .feature-text  {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
@@ -447,14 +447,14 @@
     z-index: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width:500px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 500px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
