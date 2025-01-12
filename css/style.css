@@ -230,7 +230,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px; /* Space between logos */
+    gap: 50px; /* Space between logos */
     margin-top: 40px; /* Adds 20px space above the logo container */
 
 }
@@ -580,14 +580,14 @@ header img {
     
 }
 /* Container Styles */
+/* Container Styles */
 .moving-banner {
     overflow: hidden;
     white-space: nowrap;
     background-color: #1A1A1A; /* Dark background for a professional look */
-    /* padding: 15px 10px; */
     position: relative;
     width: 96vw; /* Full width */
-    height: 80px; /* Adjust height */
+    height: 80px; /* Default height for PCs */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -605,7 +605,7 @@ header img {
 .moving-banner-content p {
     display: inline-block;
     margin: 0 40px; /* Space between text items */
-    font-size: 18px; /* Medium font size */
+    font-size: 18px; /* Default medium font size */
     color: #f1f1f1; /* Light text color for readability */
     line-height: 1.5;
     font-family: 'Arial', sans-serif; /* Clean, modern font */
@@ -657,40 +657,58 @@ header img {
     }
 }
 
-/* Keyframe for smooth scrolling */
-@keyframes scroll-right-to-left {
-    0% {
-        transform: translateX(-100%); /* Start off-screen to the left */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .moving-banner {
+        height: 70px; /* Slightly reduced height */
+        /* width: 0vw; Full width */
+
     }
-    100% {
-        transform: translateX(100%); /* Move off-screen to the right */
+
+    .moving-banner-content p {
+        font-size: 16px; /* Adjust font size */
+        margin: 0 30px; /* Slightly reduced space between text items */
     }
 }
 
+@media (max-width: 992px) {
+    .moving-banner {
+        height: 60px; /* Further reduced height */
+        width: 80vw; /* Full width */
 
 
-
-  .highlight {
-    font-size: 24px; /* تكبير النص الخاص */
-    color: #ffffff; /* لون مميز */
-    font-weight: bold; /* جعل النص عريضًا */
-  }
-  .highlightc {
-    font-size: 28px; /* تكبير النص الخاص */
-    color: #ffffff; /* لون مميز */
-    font-weight: bold; /* جعل النص عريضًا */
-  }
-  
-  /* حركة النصوص بشكل متصل
-  @keyframes scroll-continuous {
-    0% {
-      transform: translateX(0);
     }
-    100% {
-      transform: translateX(-100%);
+
+    .moving-banner-content p {
+        font-size: 14px; /* Adjust font size for tablets */
+        margin: 0 20px; /* Reduced space between items */
     }
-  } */
-  
+}
+
+@media (max-width: 768px) {
+    .moving-banner {
+        height: 50px; /* Compact height for mobile */
+        
+
+    }
+
+    .moving-banner-content p {
+        font-size: 13px; /* Smaller text size */
+        margin: 0 15px; /* Less spacing for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .moving-banner {
+        height: 45px; /* Minimal height for very small devices */
+    }
+
+    .moving-banner-content p {
+        font-size: 11px; /* Smallest text size */
+        margin: 0 10px; /* Compact spacing */
+    }
+}
+
   
   .team-item img {
     width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
@@ -712,9 +730,10 @@ h1 {
     margin: 20px 0;
     color: #333;
 }
-
+/* /
+/* Container styles */
 .chart-container {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
@@ -723,6 +742,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Chart styles */
 .chart {
     display: flex;
     justify-content: space-around;
@@ -788,7 +808,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 95%;
 }
 
 .chart {
@@ -837,6 +857,18 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
+
+/* Large screens (laptops and desktops) */
+@media (min-width: 1200px) {
+    .chart {
+        height: 400px;
+    }
+    .chart .bar {
+        width: 10%;
+    }
+}
+
+/* Medium screens (tablets and laptops) */
 @media (max-width: 1200px) {
     .chart {
         height: 350px;
@@ -846,6 +878,7 @@ footer {
     }
 }
 
+/* Smaller screens (tablets and smaller laptops) */
 @media (max-width: 992px) {
     .chart-container {
         width: 90%;
@@ -858,6 +891,7 @@ footer {
     }
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .chart-container {
         width: 95%;
@@ -881,6 +915,7 @@ footer {
     }
 }
 
+/* Very small screens (portrait mode on phones) */
 @media (max-width: 576px) {
     .chart-container {
         width: 100%;
@@ -902,13 +937,17 @@ footer {
     }
 }
 
+
+
+
+
 /* Container for the logos */
 .logo-container {
     display: flex;
     justify-content: space-around;  /* Distribute logos evenly */
     flex-wrap: nowrap;              /* Ensure logos stay in the same row */
     gap: 20px;                      /* Add spacing between logos */
-    margin: 20px auto;
+    margin: 10px auto;
     width: 90%;
     max-width: 1200px;              /* Optional: to limit max width of container */
 }
@@ -1002,3 +1041,206 @@ footer {
         max-width: 120px; /* Ensure the logos fit well on mobile */
     }
 }
+.zahraa-logo {
+    padding-top: 200px;
+}
+.responsive-logo {
+    max-height: 145px; /* Default height for PC */
+    height: auto;
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* For tablets (screen width between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .responsive-logo {
+        max-height: 145px; /* Adjusted height for tablets */
+    }
+}
+
+/* For mobile phones (screen width below 768px) */
+@media (max-width: 767px) {
+    .responsive-logo {
+        max-height: 90px; /* Adjusted height for mobiles */
+    }
+}
+/* Default styling for PC (laptops and desktops) */
+.responsive-headings {
+    color: blue;
+    padding-left: 6px;
+    font-size: 2.3rem; /* Adjust font size as needed for PC */
+}
+
+/* For tablets (screen width between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .responsive-headings {
+        padding-left: 5px; /* Reduced padding for tablets */
+        font-size: 1rem; /* Slightly smaller font size */
+    }
+}
+
+/* For mobile phones (screen width below 768px) */
+@media (max-width: 767px) {
+    .responsive-headings {
+        padding-left: 5px; /* Minimal padding for mobile */
+        font-size: 1rem; /* Smaller font size for mobile */
+        text-align: center; /* Center-align text on mobile */
+    }
+}
+
+
+/* Responsive heading inside navbar */
+.responsive-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Spacing adjustments for the navbar items */
+.navbar-nav .nav-link {
+    margin: 0 10px; /* Adjust space between nav links */
+    font-size: 1rem; /* Font size for better readability */
+}
+
+.navbar-nav .btn {
+    font-size: 1rem;
+    padding: 8px 16px; /* Consistent button padding */
+}
+
+/* Media query for smaller screens (tablet) */
+@media (max-width: 1024px) {
+    .responsive-heading {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand {
+        flex-wrap: wrap; /* Wrap logo and text for better fit */
+        text-align: center;
+    }
+
+    .responsive-logo {
+        max-height: 50px;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .responsive-heading {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        justify-content: center;
+    }
+
+    .responsive-logo {
+        max-height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 5px 0; /* Reduce spacing for nav links */
+        text-align: center;
+    }
+
+    .navbar-nav .btn {
+        padding: 8px 12px; /* Adjust button padding for smaller screens */
+    }
+}
+/* Default styling for desktops (PCs) */
+.responsive-image {
+    padding-top: 68px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for laptops */
+@media (max-width: 1200px) {
+    .responsive-image {
+        padding-top: 50px; /* Adjust padding for laptops */
+    }
+}
+
+/* Styling for tablets */
+@media (max-width: 992px) {
+    .responsive-image {
+        padding-top: 40px; /* Adjust padding for tablets */
+        width: 90%; /* Slightly reduce width */
+    }
+}
+
+/* Styling for mobile devices */
+@media (max-width: 576px) {
+    .responsive-image {
+        padding-top: 20px; /* Adjust padding for mobile */
+        width: 100%; /* Full width for mobile screens */
+    }
+}
+/* For tablets and below */
+@media (max-width: 992px) {
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .footer .col-lg-3 {
+        margin-bottom: 20px;
+    }
+    .footer .btn-link {
+        font-size: 14px;
+    }
+    .footer .position-relative {
+        max-width: 100%;
+    }
+}
+
+  /* Make graph container responsive */
+  /* Make graph container responsive */
+/* Make graph container responsive */
+/* Make graph container responsive */
+#graph-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  /* Adjust canvas size for smaller screens */
+  canvas {
+    width: 100%;
+    height: auto;
+    margin: 50px;
+  }
+
+  /* Mobile responsiveness for the graph */
+  @media (max-width: 768px) {
+    #graph-container {
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    canvas {
+      height: 300px; /* Adjust height for mobile */
+      margin: 20px;
+    }
+  }
+
+  /* Tablet responsiveness for the graph */
+  @media (max-width: 1024px) {
+    #graph-container {
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    canvas {
+      height: 500px; /* Adjust height for tablets */
+      margin: 30px;
+    }
+  }
