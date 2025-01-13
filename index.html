@@ -34,6 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 
@@ -168,22 +170,31 @@
                             <p class="text-dark mb-0">Patient Beds</p>
                         </div>
                     </div>
-                    <script>
-                        // Fetch the viewer counter and display it
-                        fetch('counter.php') // Replace with the correct path to your PHP file
-                            .then(response => response.text())
-                            .then(data => {
-                                document.querySelector('[data-toggle="counter-up"]').textContent = data;
-                            })
-                            .catch(error => console.error('Error fetching viewer counter:', error));
-                    </script>
-                    
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" data-toggle="counter-up">19573</h2>
+                            <h2 class="text-blue mb-1" data-toggle="counter-up">19873</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
                     </div>
+                    <!-- <div class="col-sm-4">
+                        <div class="border-start border-dark ps-4">
+                            <h2 class="text-blue mb-1" id="viewer-count">Loading...</h2>
+                            <p class="text-dark mb-0">Viewers</p>
+                        </div>
+                    </div> -->
+                
+                    <script>
+                        function cb(response) {
+                            document.getElementById('visits').innerText = response.value;
+                        }
+                        </script>
+                        <script async src="https://api.countapi.xyz/hit/mysite.com/visits?callback=cb">
+
+                        </script>
+                    </div>
+                    
+
+     
                 </div>
                 <div class="logo-container">
                     <img src="img/certificate.png" alt="certificate Logo" class="logo-hover">
@@ -627,6 +638,14 @@
 
      <!-- Image Container -->
      <img src="img/stockholders.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+
+     <img src="img/t1.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t2.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t3.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t4.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t5.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t6.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
+     <img src="img/t7.png" alt="Descriptive Alt Text" class="img-fluid responsive-image">
 
 
 

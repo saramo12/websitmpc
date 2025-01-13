@@ -1,23 +1,22 @@
 <?php
-// $file = 'counter.txt';
+// اسم ملف العداد
+$file = 'counter.txt';
 
-// // Create the file if it doesn't exist
-// if (!file_exists($file)) {
-//     file_put_contents($file, 0);
-// }
+// التحقق من وجود الملف، وإذا لم يكن موجودًا يتم إنشاؤه برقم ابتدائي
+if (!file_exists($file)) {
+    file_put_contents($file, data: 19873); // القيمة الابتدائية للعداد
+}
 
-// // Read the current counter value
-// $counter = (int)file_get_contents($file);
+// قراءة الرقم الحالي من الملف
+$counter = (int)file_get_contents($file);
 
-// // Increment the counter
-// $counter++;
+// زيادة الرقم بمقدار 1
+$counter++;
 
-// // Write the updated value back to the file
-// file_put_contents($file, $counter);
+// كتابة الرقم الجديد في الملف
+file_put_contents($file, $counter);
 
-// // Return the updated counter value
-// echo $counter;
-
-echo"hello world";
-
+// إرجاع الرقم الجديد
+header('Content-Type: application/json');
+echo json_encode(['counter' => $counter]);
 ?>
