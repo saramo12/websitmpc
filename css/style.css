@@ -1245,3 +1245,27 @@ footer {
     }
   }
   /* Ensure the logo is responsive */
+
+
+
+        /* body {
+            font-family: Arial, sans-serif;
+            text-align: center; */
+            /* margin: 20px; */
+        /* } */
+        .viewer-counter {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            max-width: 300px;
+            background-color: #f0f0f0;
+        }
+        .viewer-counter h2 {
+            font-size: 2rem;
+            color: #007BFF;
+        }
+        .viewer-counter p {
+            font-size: 1rem;
+            color: #333;
+        }

@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -107,9 +107,9 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Work</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
+                        <!-- <a href="feature.html" class="dropdown-item">Feature</a> -->
                         <a href="projects.html" class="dropdown-item">Projects</a>
                         <a href="overview.html" class="dropdown-item">Overview</a>
                         <a href="healthcaredelivery.html" class="dropdown-item">HealthCare Delivery</a>
@@ -170,10 +170,24 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" data-toggle="counter-up">19873</h2>
+                            <h2 class="text-blue mb-1" data-toggle="counter-up">Loading...</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
                     </div>
+                    
+                    <script>
+                        // Fetch and display the viewer count
+                        fetch('fetch_viewer.php')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.querySelector('[data-toggle="counter-up"]').textContent = data;
+                    
+                                // Increment the viewer count
+                                fetch('increment_viewer.php')
+                                    .catch(error => console.error('Error incrementing viewer count:', error));
+                            })
+                            .catch(error => console.error('Error fetching viewer count:', error));
+                    </script>
                 </div>
     
                <!-- Logos -->
@@ -377,7 +391,7 @@
                             <i class="fa fa-x-ray text-primary fs-4"></i>
                         </div>
                         <h4 class="mb-3">Scope</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <p class="mb-4">Our scope will cover the coming engineering services etc...</p>
                         <a class="btn" href="scope.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                     </div>
                 </div>
@@ -387,7 +401,7 @@
                             <i class="fa fa-brain text-primary fs-4"></i>
                         </div>
                         <h4 class="mb-3">Vision</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <p class="mb-4">To continuously improve its Vision Mission World-Wide rating among etc...</p>
                         <a class="btn" href="vision.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                     </div>
                 </div>
@@ -397,7 +411,7 @@
                             <i class="fa fa-wheelchair text-primary fs-4"></i>
                         </div>
                         <h4 class="mb-3">Values</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <p class="mb-4">We always Turn Simplicity is the ultimate Sophistication etc...</p>
                         <a class="btn" href="values.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                     </div>
                 </div>
@@ -407,7 +421,7 @@
                             <i class="fa fa-tooth text-primary fs-4"></i>
                         </div>
                         <h4 class="mb-3">Mission</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <p class="mb-4">Administrative Achieve World class hospitals ready for operations etc...</p>
                         <a class="btn" href="mission.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                     </div>
                 </div>
@@ -445,7 +459,7 @@
                     <div class="p-lg-5 ps-lg-0">
                         <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
                         <h1 class="text-white mb-4">Why Choose Us</h1>
-                        <p class="text-white mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="text-white mb-4 pb-2">validation till reaching for commissioning phase and hospital operation. </p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -454,7 +468,7 @@
                                     </div>
                                     <div class="ms-4">
                                         <p class="text-white mb-2">Experience</p>
-                                        <h5 class="text-white mb-0">Doctors</h5>
+                                        <h5 class="text-white mb-0">Engineers</h5>
                                     </div>
                                 </div>
                             </div>
@@ -917,18 +931,18 @@
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="service.html">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <!-- <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a> -->
                 </div>
                 <!-- Newsletter Section -->
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Newsletter</h5>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     
@@ -937,10 +951,10 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">MPC</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">IT Team</a>
                     </div>
                 </div>
             </div>
