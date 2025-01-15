@@ -92,8 +92,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto align-items-center">
-                <a href="index.html" class="nav-item nav-link ">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
+                <a href="index.html" class="nav-item nav-link active ">Home</a>
+                <a href="about.html" class="nav-item nav-link ">About</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
                     <div class="dropdown-menu rounded-0 m-0">
@@ -170,24 +170,30 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" data-toggle="counter-up">Loading...</h2>
+                            <h2 class="text-blue mb-1" data-toggle="counter-up">104261</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
                     </div>
-                    
-                    <script>
-                        // Fetch and display the viewer count
-                        fetch('fetch_viewer.php')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.querySelector('[data-toggle="counter-up"]').textContent = data;
+                    <!-- <div class="col-sm-4">
+                        <div class="border-start border-dark ps-4">
+                            <h2 class="text-blue mb-1" data-toggle="counter-up">Loading...</h2>
+                            <p class="text-dark mb-0">Viewers</p>
+                        </div>
+                    </div> -->
+                    <!-- <script> -->
+                        <!-- // Fetch and display the viewer count
+                        // fetch('fetch_viewer.php')
+                        //     .then(response => response.text())
+                        //     .then(data => {
+                        //         document.querySelector('[data-toggle="counter-up"]').textContent = data;
                     
                                 // Increment the viewer count
-                                fetch('increment_viewer.php')
-                                    .catch(error => console.error('Error incrementing viewer count:', error));
-                            })
-                            .catch(error => console.error('Error fetching viewer count:', error));
-                    </script>
+                    //             fetch('increment_viewer.php')
+                    //                 .catch(error => console.error('Error incrementing viewer count:', error));
+                    //         })
+                    //         .catch(error => console.error('Error fetching viewer count:', error)); -->
+                    <!-- // </script> -->
+                    
                 </div>
     
                <!-- Logos -->

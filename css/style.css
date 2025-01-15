@@ -1066,9 +1066,9 @@ footer {
 /* Default styling for PC (laptops and desktops) */
 .responsive-headings {
     color: blue;
-    padding-left: 6px;
-    font-size: 2.3rem; /* Adjust font size as needed for PC */
+    font-size: 2.2rem; /* Adjust font size as needed for PC */
 }
+/* For tablets (screen width between 768px and 1024px) */
 
 /* For tablets (screen width between 768px and 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -1248,11 +1248,11 @@ footer {
 
 
 
-        /* body {
-            font-family: Arial, sans-serif;
-            text-align: center; */
+         body {
+            /* font-family: Arial, sans-serif; */
+            text-align: center; 
             /* margin: 20px; */
-        /* } */
+        }
         .viewer-counter {
             margin: 20px auto;
             padding: 20px;
