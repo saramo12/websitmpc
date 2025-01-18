@@ -1,27 +1,16 @@
 <?php
-// Database connection details
-$host = 'localhost';
-$db = 'website_data';
-$user = 'root'; // Replace with your DB username
-$password = ''; // Replace with your DB password
+$counterFile = 'counter.txt';
+$displayFile = 'display.txt';
 
-try {
-    // Connect to the database
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Increment the counter
-    $stmt = $pdo->prepare("UPDATE viewer_counter SET view_count = view_count + 1 WHERE page_name = 'homepage'");
-    $stmt->execute();
-
-    // Fetch the updated count
-    $stmt = $pdo->prepare("SELECT view_count FROM viewer_counter WHERE page_name = 'homepage'");
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    // Output the updated count
-    echo $result['view_count'];
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+// Initialize the counter file if not exists
+if (!file_exists($counterFile)) {
+    file_put_contents($counterFile, 0);
 }
+
+// Increment the counter
+$counter = (int)file_get_contents($counterFile) + 1;
+file_put_contents($counterFile, $counter);
+
+// Update the display file
+file_put_contents($displayFile, $counter);
 ?>
