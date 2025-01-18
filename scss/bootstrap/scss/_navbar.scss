@@ -220,6 +220,8 @@
 
   .navbar-nav {
     .nav-link {
+          padding: 0.5rem 0.8rem; /* Adjust vertical and horizontal padding */
+
       color: $navbar-light-color;
 
       &:hover,

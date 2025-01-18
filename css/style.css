@@ -145,8 +145,9 @@
     padding: 25px; /* Customize the padding */
 }
 
+
 .navbar-brand img{
-    padding: 10;
+    padding:0;
 }
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
@@ -1066,7 +1067,7 @@ footer {
 /* Default styling for PC (laptops and desktops) */
 .responsive-headings {
     color: blue;
-    font-size: 2.2rem; /* Adjust font size as needed for PC */
+    font-size: 2rem; /* Adjust font size as needed for PC */
 }
 /* For tablets (screen width between 768px and 1024px) */
 
@@ -1102,7 +1103,7 @@ footer {
 
 .navbar-nav .btn {
     font-size: 1rem;
-    padding: 8px 16px; /* Consistent button padding */
+    /* padding: 8px 16px; Consistent button padding */
 }
 
 /* Media query for smaller screens (tablet) */

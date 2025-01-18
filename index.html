@@ -82,33 +82,48 @@
     
     
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-3">
-            <img src="img/logo.png" alt="Clinic Logo" class="responsive-logo">
-            <h1 class="responsive-headings mb-0 ms-2">Tailor Your HealthCare Facility</h1>
+   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid">
+        <!-- Brand Logo and Heading -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="img/logo.png" alt="Clinic Logo" class="responsive-logo ">
+            <h1 class="responsive-headings mb-0">Tailor Your HealthCare Facility</h1>
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        
+        <!-- Toggler for Collapsible Navbar -->
+        <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        <!-- Collapsible Navbar Content -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto align-items-center">
-                <a href="index.html" class="nav-item nav-link active ">Home</a>
-                <a href="about.html" class="nav-item nav-link ">About</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Service</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="architecturedesign.html" class="dropdown-item">Architecture Design</a>
-                        <a href="medicalplanning.html" class="dropdown-item">Medical Planning</a>
-                        <a href="medicalequipment.html" class="dropdown-item">Medical Equipment</a>
-                        <a href="projecttasks.html" class="dropdown-item">Project Tasks</a>
-                        <a href="hospitaldesign.html" class="dropdown-item ">Hospital Design</a>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                    <ul class="dropdown-menu rounded-0 m-0">
+                        <li><a href="architecturedesign.html" class="dropdown-item">Architecture Design</a></li>
+                        <li><a href="medicalplanning.html" class="dropdown-item">Medical Planning</a></li>
+                        <li><a href="medicalequipment.html" class="dropdown-item">Medical Equipment</a></li>
+                        <li><a href="projecttasks.html" class="dropdown-item">Project Tasks</a></li>
+                        <li><a href="hospitaldesign.html" class="dropdown-item">Hospital Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
+
+
     <!-- Navbar End -->
 
 
