@@ -1,5 +1,6 @@
 <?php
-header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: *"); // Allow all origins (fixes CORS issues)
+header("Content-Type: application/json");
 
 $counterFile = 'counter.txt';
 
