@@ -166,14 +166,28 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" data-toggle="counter-up">104261</h2>
+                            <h2 id="counter"  class="text-blue mb-1" data-toggle="counter-up">1097266</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
                     </div>
-                    
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            fetch("https://mpc-gulf.ae/counter.php") // Ensure this URL is correct
+                                .then(response => response.json())
+                                .then(data => {
+                                    console.log("Counter Data:", data);
+                                    if (data.count !== undefined) {
+                                        document.getElementById("counter").textContent = data.count; // Ensure correct ID
+                                    } else {
+                                        console.error("Error: Invalid response from server", data);
+                                    }
+                                })
+                                .catch(error => console.error("Fetch Error:", error));
+                        });
+                        </script>
                     
                 </div>
-    
+                
                <!-- Logos -->
 <!-- Logos -->
 <div class="d-flex justify-content-center align-items-center gap-3 mt-4">

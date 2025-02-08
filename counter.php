@@ -1,36 +1,25 @@
 <?php
 header('Content-Type: application/json');
 
-// Database connection
-$host = "localhost";
-$user = "root"; // XAMPP default
-$pass = ""; // No password for local
-$dbname = "counter_db"; // Your database name
+$counterFile = 'counter.txt';
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-if ($conn->connect_error) {
-    echo json_encode(["error" => "Database connection failed"]);
-    exit();
+// Check if file exists; if not, create it
+if (!file_exists($counterFile)) {
+    file_put_contents($counterFile, "0"); // Initialize counter
 }
 
-// Get the counter value
-$sql = "SELECT count FROM page_counter WHERE id = 1";
-$result = $conn->query($sql);
+// Read current count
+$count = (int) file_get_contents($counterFile);
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $currentCount = intval($row["count"]); // Convert to integer
+// Increase counter
+$count++;
 
-    // Increment count
-    $newCount = $currentCount + 1;
-    $updateSQL = "UPDATE page_counter SET count = $newCount WHERE id = 1";
-    $conn->query($updateSQL);
-
-    // Return the correct count
-    echo json_encode(["count" => $newCount]);
-} else {
-    echo json_encode(["count" => 104261]); // Fallback default
+// Save updated count back to file
+if (file_put_contents($counterFile, $count) === false) {
+    echo json_encode(["error" => "Failed to write to file"]);
+    exit;
 }
 
-$conn->close();
+// Return updated count
+echo json_encode(["count" => $count]);
 ?>
