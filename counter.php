@@ -1,26 +1,19 @@
 <?php
-header("Access-Control-Allow-Origin: *"); // Allow all origins (fixes CORS issues)
-header("Content-Type: application/json");
+include "db_connect.php"; // Your database connection file
 
-$counterFile = 'counter.txt';
+// Get the current count
+$sql = "SELECT count FROM page_views WHERE id = 1";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$current_count = $row['count'];
 
-// Check if file exists; if not, create it
-if (!file_exists($counterFile)) {
-    file_put_contents($counterFile, "0"); // Initialize counter
-}
+// Increase the count by 1
+$new_count = $current_count + 1;
+$update_sql = "UPDATE page_views SET count = $new_count WHERE id = 1";
+$conn->query($update_sql);
 
-// Read current count
-$count = (int) file_get_contents($counterFile);
+// Return the updated count
+echo $new_count;
 
-// Increase counter
-$count++;
-
-// Save updated count back to file
-if (file_put_contents($counterFile, $count) === false) {
-    echo json_encode(["error" => "Failed to write to file"]);
-    exit;
-}
-
-// Return updated count
-echo json_encode(["count" => $count]);
+$conn->close();
 ?>
