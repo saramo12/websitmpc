@@ -172,6 +172,29 @@
                             <h2 class="text-blue mb-1" data-toggle="counter-up">1097266</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
+                        <script type="module">
+                            // Import the functions you need from the SDKs you need
+                            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+                            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+                            // TODO: Add SDKs for Firebase products that you want to use
+                            // https://firebase.google.com/docs/web/setup#available-libraries
+                          
+                            // Your web app's Firebase configuration
+                            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                            const firebaseConfig = {
+                              apiKey: "AIzaSyDYS3-GSwcjstUAa6jJzOvvwMYE1LCtUgM",
+                              authDomain: "mpc1-77e36.firebaseapp.com",
+                              projectId: "mpc1-77e36",
+                              storageBucket: "mpc1-77e36.firebasestorage.app",
+                              messagingSenderId: "562461748176",
+                              appId: "1:562461748176:web:8d0ddc68f3b08babf3a7d5",
+                              measurementId: "G-PT63PE3J78"
+                            };
+                          
+                            // Initialize Firebase
+                            const app = initializeApp(firebaseConfig);
+                            const analytics = getAnalytics(app);
+                          </script>
                     </div>
                     <!-- <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
@@ -272,13 +295,13 @@
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="owl-carousel header-carousel">
                     <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-1.jpg" alt="Carousel Image 1">
+                        <img class="img-fluid" src="img/carousel-3.jpg" alt="Carousel Image 1">
                     </div>
                     <div class="owl-carousel-item position-relative">
                         <img class="img-fluid" src="img/carousel-2.jpg" alt="Carousel Image 2">
                     </div>
                     <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-3.jpg" alt="Carousel Image 3">
+                        <img class="img-fluid" src="img/carousel-1.jpg" alt="Carousel Image 3">
                     </div>
                 </div>
             </div>
@@ -356,8 +379,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/about-1.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt="" style="margin-top: -25%;">
+                        <img class="img-fluid rounded w-75 align-self-end" src="img/about-2.jpg" alt="">
+                        <!-- <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt="" style="margin-top: -25%;"> -->
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
