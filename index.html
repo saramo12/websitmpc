@@ -42,7 +42,6 @@
 
 </head>
 
-
 <body>
     
     
@@ -169,32 +168,19 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" data-toggle="counter-up">1097266</h2>
+                            <h2 class="text-blue mb-1" id="counter">0</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
-                        <script type="module">
-                            // Import the functions you need from the SDKs you need
-                            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-                            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
-                            // TODO: Add SDKs for Firebase products that you want to use
-                            // https://firebase.google.com/docs/web/setup#available-libraries
-                          
-                            // Your web app's Firebase configuration
-                            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-                            const firebaseConfig = {
-                              apiKey: "AIzaSyDYS3-GSwcjstUAa6jJzOvvwMYE1LCtUgM",
-                              authDomain: "mpc1-77e36.firebaseapp.com",
-                              projectId: "mpc1-77e36",
-                              storageBucket: "mpc1-77e36.firebasestorage.app",
-                              messagingSenderId: "562461748176",
-                              appId: "1:562461748176:web:8d0ddc68f3b08babf3a7d5",
-                              measurementId: "G-PT63PE3J78"
-                            };
-                          
-                            // Initialize Firebase
-                            const app = initializeApp(firebaseConfig);
-                            const analytics = getAnalytics(app);
-                          </script>
+                   
+                    
+                    <script>
+                        let count = localStorage.getItem('page_view') || 1097266; // Start from existing count
+                        count++;
+                        localStorage.setItem('page_view', count);
+                        document.getElementById('counter').innerText = count;
+                    </script>
+                    
+                        
                     </div>
                     <!-- <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
@@ -305,9 +291,18 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    
+    <!-- <style>
+.owl-carousel-item img { -->
+    <!-- width: 100%; /* Ensures images take full width */ -->
+    <!-- height: auto; /* Keeps aspect ratio */ -->
+    <!-- object-fit: cover; /* Crops image if needed */ -->
+    <!-- border-radius: 10px; /* Optional: Adds rounded corners */ -->
+<!-- } -->
+
+    <!-- </style> -->
     <style>
     /* General Styling */
     .header {
